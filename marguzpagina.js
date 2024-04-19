@@ -297,8 +297,7 @@ function preDisplayQuoteInModal(parcel) {
     contentContainer.style.backgroundColor = "#f9f9f9";
     contentContainer.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.1)";
     contentContainer.style.margin = "5% auto";
-    contentContainer.style.maxWidth = "30%";
-    contentContainer.style.minWidth = "300px";
+    contentContainer.style.width = "70%";
     contentContainer.style.maxHeight = "70%";
     contentContainer.style.overflowY = "auto";
   } else {
@@ -323,8 +322,7 @@ function preDisplayQuoteInModal(parcel) {
 
   arrayServices.forEach((service) => {
     const quoteContainer = document.createElement("div");
-    quoteContainer.style.marginBottom = "30px";
-    quoteContainer.style.borderBottom = "2px solid #828282";
+    quoteContainer.style.marginBottom = "10px";
     quoteContainer.style.padding = "15px";
     quoteContainer.id = parcel + "-" + service;
 
@@ -447,10 +445,6 @@ function displayQuoteInModal(quoteData, parcel) {
         parcel + "-" + quote.service.toLowerCase()
       );
     }
-
-    quoteContainer.style.marginBottom = "30px";
-    quoteContainer.style.borderBottom = "2px solid #828282";
-    quoteContainer.style.padding = "15px";
 
     const keysToDisplay = ["service", "deliveryDate", "total"];
     const TitlesToDisplay = ["Servicio:", "Entrega Estimada:", "Total:"];
